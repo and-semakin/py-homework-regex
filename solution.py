@@ -72,6 +72,7 @@ if __name__ == "__main__":
     pprint(fixed_contacts_list)
 
     # merge duplicates
+    # contacts are duplicates if they have the same last name and first name
     grouped_contacts = defaultdict(list)
     for contact in fixed_contacts_list:
         grouped_contacts[(contact["lastname"], contact["firstname"])].append(contact)
